@@ -7,7 +7,7 @@ init()
 
 from colorama import Fore, Back, Style
 def rscan(addr):
-	"""Check address for duplicated r values."""
+	"""Check address for  r values."""
 	# TODO: add BCI API check address
 
 	print "ADDRESS-R-SCAN: "
@@ -64,7 +64,7 @@ def rscan(addr):
 		print (Fore.GREEN +"\n\n======================Good pubKey. Not vulnerable=========================.")
 		print(Style.RESET_ALL)
 	else:
-		print (Fore.RED + "Address %s has %d reused R value%s!" % (addr, len(bad), "s"[len(bad)==1:]))
+		print (Fore.RED + "Address %s has %reused R value%s!" % (addr, len(bad), "s"[len(bad)==1:]))
 		return bad
 		print(Style.RESET_ALL)
 if __name__ == '__main__':
